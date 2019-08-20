@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+import YouTube from 'react-youtube';
 import './App.css';
+//import backgroundvid from './tokyotrain.webm';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const options = {
+		height: '390',
+		width: '640',
+		playerVars: {
+			autoplay: 1,
+			controls: 0,
+			disablekb: 1,
+			fs: 0,
+			iv_load_policy: 3,
+			loop: 1,
+			modestbranding: 1,
+		}
+	};
+
+	return (
+		<div className="App">
+			<YouTube
+				videoId="UExPgSxXtOc"
+				opts={options}
+			/>
+			<p>
+				teddyrobz
+			</p>
+		</div>
+	);
 }
 
 export default App;
