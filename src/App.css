@@ -1,34 +1,81 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: black;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground { width: 300%; left: -100%; }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
+/***** Footer *****/
+footer {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  padding-top: 20px;
+  bottom: 0;
+  text-align: center;
+  display: block;
+  float: left;
+  width: 100%;
+}
+footer a {
+  padding: 0 1rem;
+  color: #efefea;
+  font-size: 30px;
+  transition: all 0.5s ease;
+}
+/*
+footer a.fb:hover {
+	color: #3b5998;
+	transition: all 0.5s ease;
+}
+*/
+footer a.ig:hover {
+  color: #bd0f89;
+  transition: all 0.5s ease;
+}
+footer a.tw:hover {
+  color: #1da1f2;
+  transition: all 0.5s ease;
+}
+footer a.yt:hover {
+  color: #cd201f;
+  transition: all 0.5s ease;
+}
+footer a.st:hover {
+  color: #727272;
+  transition: all 0.5s ease;
+}
+footer a.gh:hover {
+  color: #6e5494;
+  transition: all 0.5s ease;
+}
+footer a.sc:hover {
+  color: #ff8800;
+  transition: all 0.5s ease;
+}
+footer a.li:hover {
+  color: #1a85bc;
+  transition: all 0.5s ease;
+}
