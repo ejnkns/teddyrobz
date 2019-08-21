@@ -61,6 +61,7 @@ class Player extends React.Component {
 					url={this.videoUrl}
 					className='react-player'
 					playing
+					muted
 					width='100%'
 					height='100%'
 					progressInterval={100}

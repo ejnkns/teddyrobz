@@ -32,7 +32,7 @@
 footer {
   background: rgba(0,0,0,0.5);
   position: absolute;
-  padding-top: 20px;
+  padding-top: 10px;
   bottom: 0;
   text-align: center;
   display: block;
@@ -40,7 +40,7 @@ footer {
   width: 100%;
 }
 footer a {
-  padding: 0 1rem;
+  padding: 0 3rem;
   color: #efefea;
   font-size: 30px;
   transition: all 0.5s ease;
